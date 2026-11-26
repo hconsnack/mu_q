@@ -1,0 +1,2002 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>공연장 빠른길 · 빠른출구 총정리 (2026 업데이트) - 연극, 뮤지컬 갤러리</title>
+  <style>
+    /* ==========================================================================
+       1. DCInside Official White & Navy Design System (Zero External CDN)
+       ========================================================================== */
+    :root {
+      --bg-page: #F5F7FA;
+      --bg-card: #FFFFFF;
+      --bg-subtle: #F8FAFE;
+      --bg-row-hover: #F1F5FC;
+
+      --dc-navy: #3B4890;
+      --dc-navy-dark: #29367C;
+      --dc-navy-soft: #EEF2FB;
+      --dc-blue: #2B59C3;
+
+      --dc-gold: #C89B3C;
+      --dc-gold-bg: #FBF6E9;
+      --dc-gold-bd: #E8D29B;
+
+      --dc-red: #E03131;
+      --dc-red-bg: #FFF1F1;
+      --dc-red-bd: #F7C6C6;
+
+      --dc-green: #2E8B57;
+      --dc-green-bg: #EFF9F3;
+      --dc-green-bd: #BCE3CB;
+
+      --border-main: #DDE2EC;
+      --border-light: #EAEEF5;
+      --border-strong: #C6CFDF;
+
+      --text-main: #111827;
+      --text-body: #333333;
+      --text-muted: #666666;
+      --text-light: #888888;
+
+      --radius-sm: 4px;
+      --radius-md: 6px;
+      --shadow-card: 0 2px 8px rgba(41, 54, 124, 0.05);
+      --shadow-hover: 0 6px 16px rgba(41, 54, 124, 0.1);
+      --font-dc: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕', 'Noto Sans KR', sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-dc);
+      background-color: var(--bg-page);
+      color: var(--text-body);
+      font-size: 13.5px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      word-break: keep-all;
+    }
+
+    button, input, select, textarea {
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    /* ==========================================================================
+       2. Main Container (Optimized for 840px Iframe & Standalone View)
+       ========================================================================== */
+    .container {
+      width: 100%;
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 16px 14px 52px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    /* ==========================================================================
+       3. Clean Compact Hero Card (4px #29367C Top Bar, NO Top Branding Row)
+       ========================================================================== */
+    .hero-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-main);
+      border-top: 4px solid var(--dc-navy-dark);
+      border-radius: var(--radius-md);
+      padding: 20px 22px 18px;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .hero-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--dc-navy-dark);
+      letter-spacing: -0.5px;
+      line-height: 1.3;
+    }
+
+    .hero-sub-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .update-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 10px;
+      border-radius: var(--radius-sm);
+      background-color: var(--dc-navy);
+      color: #FFFFFF;
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+      white-space: nowrap;
+    }
+
+    .update-badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #F4CE74;
+    }
+
+    .hero-subtitle {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .hero-stats-row {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      flex-wrap: wrap;
+      padding-top: 4px;
+    }
+
+    .stat-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+      font-size: 12px;
+      font-weight: 800;
+      border: 1px solid var(--border-main);
+      background-color: var(--bg-subtle);
+      color: var(--dc-navy-dark);
+    }
+
+    .stat-pill.gold {
+      background-color: var(--dc-gold-bg);
+      border-color: var(--dc-gold-bd);
+      color: #8A6518;
+    }
+
+    .stat-pill.green {
+      background-color: var(--dc-green-bg);
+      border-color: var(--dc-green-bd);
+      color: var(--dc-green);
+    }
+
+    .metro-notice-strip {
+      background-color: var(--bg-subtle);
+      border: 1px solid var(--border-main);
+      border-left: 3px solid var(--dc-navy);
+      border-radius: var(--radius-sm);
+      padding: 8px 12px;
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.48;
+      margin-top: 2px;
+    }
+
+    .metro-notice-strip strong {
+      color: var(--dc-navy-dark);
+    }
+
+    /* ==========================================================================
+       4. Sticky Search & 7 Filter Tabs Toolbar
+       ========================================================================== */
+    .sticky-toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(245, 247, 250, 0.95);
+      backdrop-filter: blur(8px);
+      padding: 4px 0;
+    }
+
+    .toolbar-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-main);
+      border-radius: var(--radius-md);
+      padding: 12px 14px;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .search-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .search-input-wrap {
+      position: relative;
+      flex: 1;
+    }
+
+    .search-input-wrap svg {
+      position: absolute;
+      left: 11px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--dc-navy);
+      pointer-events: none;
+    }
+
+    .search-input {
+      width: 100%;
+      height: 37px;
+      padding: 0 34px 0 35px;
+      border: 1.5px solid var(--dc-navy);
+      border-radius: var(--radius-sm);
+      background-color: var(--bg-card);
+      font-size: 13px;
+      color: var(--text-main);
+      outline: none;
+      transition: box-shadow 0.15s ease;
+    }
+
+    .search-input::placeholder {
+      color: #9AA1B2;
+    }
+
+    .search-input:focus {
+      box-shadow: 0 0 0 3px rgba(59, 72, 144, 0.14);
+    }
+
+    .search-clear-btn {
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 21px;
+      height: 21px;
+      border-radius: 50%;
+      background-color: var(--dc-navy-soft);
+      color: var(--dc-navy-dark);
+      font-size: 11px;
+      font-weight: 800;
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .search-clear-btn.visible {
+      display: inline-flex;
+    }
+
+    .filter-tabs-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding-top: 8px;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .tab-strip {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .tab-strip::-webkit-scrollbar {
+      display: none;
+    }
+
+    .filter-tab {
+      flex-shrink: 0;
+      padding: 6px 11px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-main);
+      background-color: var(--bg-card);
+      color: var(--text-muted);
+      font-size: 12px;
+      font-weight: 700;
+      transition: all 0.14s ease;
+      white-space: nowrap;
+    }
+
+    .filter-tab:hover {
+      border-color: var(--dc-navy);
+      color: var(--dc-navy-dark);
+      background-color: var(--bg-subtle);
+    }
+
+    .filter-tab.active {
+      background-color: var(--dc-navy);
+      border-color: var(--dc-navy);
+      color: #FFFFFF;
+    }
+
+    .filter-status-txt {
+      flex-shrink: 0;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .filter-status-txt strong {
+      color: var(--dc-navy-dark);
+    }
+
+    /* ==========================================================================
+       5. Section Cards & Headings
+       ========================================================================== */
+    .guide-section {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-main);
+      border-radius: var(--radius-md);
+      padding: 18px 20px 20px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .guide-section.hidden-block {
+      display: none;
+    }
+
+    .sec-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding-bottom: 10px;
+      margin-bottom: 14px;
+      border-bottom: 2px solid var(--dc-navy);
+      flex-wrap: wrap;
+    }
+
+    .sec-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--dc-navy-dark);
+      letter-spacing: -0.4px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .sec-count-badge {
+      font-size: 11.5px;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: var(--radius-sm);
+      background-color: var(--dc-navy-soft);
+      color: var(--dc-navy-dark);
+    }
+
+    /* ==========================================================================
+       6. Official Korean Subway Line Color Badges & Venue Cards
+       ========================================================================== */
+    .line-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2px 7px;
+      border-radius: 3px;
+      font-size: 11px;
+      font-weight: 800;
+      color: #FFFFFF;
+      line-height: 1.25;
+      white-space: nowrap;
+    }
+
+    .line-1 { background-color: #0052A4; }
+    .line-2 { background-color: #00A84D; }
+    .line-3 { background-color: #EF7C1C; }
+    .line-4 { background-color: #00A5DE; }
+    .line-5 { background-color: #996CAC; }
+    .line-6 { background-color: #CD7C2F; }
+    .line-7 { background-color: #747F00; }
+    .line-8 { background-color: #E6186C; }
+    .line-9 { background-color: #BDB092; color: #1F2937; }
+    .line-arex { background-color: #0090D2; }
+    .line-suin { background-color: #F5A200; color: #1F2937; }
+    .line-gyeongui { background-color: #77C4A3; color: #1F2937; }
+
+    .exit-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 2px 8px;
+      border-radius: 3px;
+      background-color: var(--dc-navy-soft);
+      border: 1px solid #C5D2EE;
+      color: var(--dc-navy-dark);
+      font-size: 11.5px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .new-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 2px 7px;
+      border-radius: 3px;
+      background-color: var(--dc-gold);
+      color: #FFFFFF;
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: 0.3px;
+      white-space: nowrap;
+    }
+
+    .tag-muted {
+      display: inline-flex;
+      align-items: center;
+      padding: 2px 7px;
+      border-radius: 3px;
+      background-color: #EEF1F6;
+      border: 1px solid var(--border-main);
+      color: var(--text-muted);
+      font-size: 10.5px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .venue-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .venue-cards-grid.single-col {
+      grid-template-columns: 1fr;
+    }
+
+    .venue-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-main);
+      border-radius: var(--radius-md);
+      padding: 14px 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .venue-card:hover {
+      border-color: var(--dc-navy);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .venue-card.is-new-card {
+      border-top: 3px solid var(--dc-gold);
+    }
+
+    .venue-card.is-route-card {
+      border-top: 3px solid var(--dc-navy);
+    }
+
+    .venue-card.hidden-item {
+      display: none;
+    }
+
+    .vc-top {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .vc-title-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .vc-name {
+      font-size: 14.5px;
+      font-weight: 800;
+      color: var(--text-main);
+      letter-spacing: -0.3px;
+      line-height: 1.35;
+    }
+
+    .vc-sub {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .vc-station-bar {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      flex-wrap: wrap;
+      padding: 6px 8px;
+      background-color: var(--bg-subtle);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
+    }
+
+    .vc-station-name {
+      font-size: 12.5px;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .vc-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 12.7px;
+      color: var(--text-body);
+      line-height: 1.55;
+    }
+
+    .vc-step-line {
+      position: relative;
+      padding-left: 13px;
+    }
+
+    .vc-step-line::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--dc-navy);
+      font-weight: 800;
+    }
+
+    .step-flow {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      flex-wrap: wrap;
+      padding: 8px 10px;
+      background-color: var(--bg-page);
+      border: 1px solid var(--border-main);
+      border-radius: var(--radius-sm);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .step-chip {
+      padding: 2px 7px;
+      border-radius: 3px;
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-strong);
+      color: var(--dc-navy-dark);
+    }
+
+    .step-arrow {
+      color: var(--dc-navy);
+      font-weight: 800;
+    }
+
+    .bus-box {
+      background-color: var(--bg-subtle);
+      border: 1px solid var(--border-main);
+      border-radius: var(--radius-sm);
+      padding: 9px 11px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-size: 12.5px;
+    }
+
+    .bus-box-title {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--dc-navy-dark);
+    }
+
+    .bus-num-tag {
+      display: inline-block;
+      padding: 1px 6px;
+      border-radius: 3px;
+      background-color: var(--dc-green);
+      color: #FFFFFF;
+      font-size: 11px;
+      font-weight: 800;
+      margin-right: 3px;
+    }
+
+    .bus-num-tag.blue {
+      background-color: var(--dc-blue);
+    }
+
+    .caution-box {
+      background-color: var(--dc-red-bg);
+      border: 1px solid var(--dc-red-bd);
+      border-left: 3px solid var(--dc-red);
+      border-radius: var(--radius-sm);
+      padding: 8px 10px;
+      font-size: 12px;
+      color: #A61E1E;
+      line-height: 1.5;
+    }
+
+    .caution-badge {
+      display: inline-block;
+      padding: 1px 6px;
+      border-radius: 3px;
+      background-color: var(--dc-red);
+      color: #FFFFFF;
+      font-size: 10.5px;
+      font-weight: 800;
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+
+    .vc-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding-top: 8px;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .vc-summary-note {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--dc-navy);
+    }
+
+    .btn-copy-mini {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 9px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-main);
+      background-color: var(--bg-subtle);
+      color: var(--dc-navy-dark);
+      font-size: 11.5px;
+      font-weight: 700;
+      transition: all 0.14s ease;
+      white-space: nowrap;
+    }
+
+    .btn-copy-mini:hover {
+      background-color: var(--dc-navy);
+      border-color: var(--dc-navy);
+      color: #FFFFFF;
+    }
+
+    /* ==========================================================================
+       7. Section 3 — 34-Venue One-Click Copy Index Table
+       ========================================================================== */
+    .index-hint {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .index-table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      border-top: 2px solid var(--dc-navy);
+      border-bottom: 1px solid var(--dc-navy);
+    }
+
+    .index-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 620px;
+    }
+
+    .index-table thead th {
+      background-color: var(--bg-subtle);
+      border-bottom: 1px solid var(--border-main);
+      padding: 9px 10px;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--dc-navy-dark);
+      text-align: left;
+      white-space: nowrap;
+    }
+
+    .index-table tbody tr {
+      border-bottom: 1px solid var(--border-light);
+      cursor: pointer;
+      transition: background-color 0.12s ease;
+    }
+
+    .index-table tbody tr:hover {
+      background-color: var(--bg-row-hover);
+    }
+
+    .index-table tbody tr.hidden-row {
+      display: none;
+    }
+
+    .index-table td {
+      padding: 8.5px 10px;
+      font-size: 12.5px;
+      color: var(--text-body);
+      vertical-align: middle;
+    }
+
+    .td-venue {
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .td-subname {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-top: 1px;
+    }
+
+    .td-station {
+      font-weight: 700;
+      color: var(--text-main);
+      white-space: nowrap;
+    }
+
+    .td-tip {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .td-copy {
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    /* ==========================================================================
+       8. Section 4 — User Tip Board & Post-Text Copy Bar
+       ========================================================================== */
+    .user-tips-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .user-tip-item {
+      background-color: var(--bg-subtle);
+      border: 1px solid var(--border-main);
+      border-left: 3px solid var(--dc-blue);
+      border-radius: var(--radius-sm);
+      padding: 10px 12px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .user-tip-body {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .user-tip-head {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--dc-navy-dark);
+    }
+
+    .user-tip-text {
+      font-size: 12.5px;
+      color: var(--text-body);
+    }
+
+    .user-tip-meta {
+      font-size: 11px;
+      color: var(--text-light);
+    }
+
+    .btn-del-tip {
+      font-size: 11px;
+      color: var(--text-light);
+      padding: 2px 7px;
+      border-radius: 3px;
+      border: 1px solid var(--border-main);
+      background-color: var(--bg-card);
+      flex-shrink: 0;
+    }
+
+    .btn-del-tip:hover {
+      color: var(--dc-red);
+      border-color: var(--dc-red);
+    }
+
+    .tip-form {
+      background-color: var(--bg-page);
+      border: 1px solid var(--border-main);
+      border-radius: var(--radius-sm);
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .tip-form-title {
+      font-size: 13.5px;
+      font-weight: 800;
+      color: var(--dc-navy-dark);
+    }
+
+    .tip-form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 120px;
+      gap: 8px;
+    }
+
+    .form-input,
+    .form-textarea {
+      width: 100%;
+      padding: 8px 10px;
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-sm);
+      background-color: var(--bg-card);
+      font-size: 12.5px;
+      outline: none;
+    }
+
+    .form-input:focus,
+    .form-textarea:focus {
+      border-color: var(--dc-navy);
+    }
+
+    .form-textarea {
+      height: 62px;
+      resize: vertical;
+    }
+
+    .tip-form-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .btn-dc-primary {
+      height: 34px;
+      padding: 0 16px;
+      border-radius: var(--radius-sm);
+      background-color: var(--dc-navy);
+      color: #FFFFFF;
+      font-size: 12.5px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: background-color 0.14s ease;
+    }
+
+    .btn-dc-primary:hover {
+      background-color: var(--dc-navy-dark);
+    }
+
+    .btn-dc-outline {
+      height: 34px;
+      padding: 0 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--dc-navy);
+      background-color: var(--bg-card);
+      color: var(--dc-navy-dark);
+      font-size: 12.5px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.14s ease;
+    }
+
+    .btn-dc-outline:hover {
+      background-color: var(--dc-navy-soft);
+    }
+
+    .bottom-copy-bar {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border-light);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .empty-search-box {
+      display: none;
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-main);
+      border-radius: var(--radius-md);
+      padding: 38px 20px;
+      text-align: center;
+      color: var(--text-muted);
+    }
+
+    .empty-search-box.visible {
+      display: block;
+    }
+
+    .dc-footer {
+      text-align: center;
+      font-size: 11.5px;
+      color: var(--text-light);
+      padding-top: 4px;
+    }
+
+    /* Toast Notification (Smooth inside iframe & standalone) */
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%) translateY(14px);
+      background-color: var(--dc-navy-dark);
+      color: #FFFFFF;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      font-size: 12.5px;
+      font-weight: 700;
+      box-shadow: 0 8px 24px rgba(17, 24, 39, 0.28);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      z-index: 250;
+      max-width: calc(100% - 28px);
+      text-align: center;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* ==========================================================================
+       9. Responsive Mobile Optimization (<= 720px)
+       ========================================================================== */
+    @media (max-width: 720px) {
+      .container {
+        padding: 12px 10px 44px;
+      }
+
+      .hero-card {
+        padding: 16px 15px;
+      }
+
+      .hero-title {
+        font-size: 19px;
+      }
+
+      .venue-cards-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .tip-form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .guide-section {
+        padding: 15px 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container" id="top">
+    <!-- ====================================================================
+         1. Clean Compact Hero Card (NO Top Logo/Gallery Row)
+         ==================================================================== -->
+    <header class="hero-card">
+      <h1 class="hero-title">공연장 빠른길 · 빠른출구 총정리</h1>
+
+      <div class="hero-sub-row">
+        <span class="update-badge">
+          <span class="update-badge-dot" aria-hidden="true"></span>
+          <span>2026 업데이트</span>
+        </span>
+        <span class="hero-subtitle">2020~2026 신설·이전·리뉴얼 공연장 &amp; 콘서트홀 반영 · 클릭 시 역/출구 자동 복사</span>
+      </div>
+
+      <div class="hero-stats-row">
+        <span class="stat-pill">총 34개 공연장</span>
+        <span class="stat-pill gold">신설·이전 8곳 추가</span>
+        <span class="stat-pill green">버스·환승 꿀팁 수록</span>
+      </div>
+
+      <div class="metro-notice-strip">
+        <strong>※ 안내:</strong> 지하철 빠른칸 번호(예: 3-4, 6-4)는 <strong>탑승 방향(내선·외선, 상행·하행) 및 열차 편성</strong>에 따라 달라질 수 있으므로, 탑승 전 카카오지하철·네이버지도 앱에서 실시간 빠른 하차 칸을 함께 확인해 주세요.
+      </div>
+    </header>
+
+    <!-- ====================================================================
+         2. Sticky Search & 7 Filter Tabs Toolbar
+         ==================================================================== -->
+    <nav class="sticky-toolbar" aria-label="공연장 검색 및 카테고리 필터">
+      <div class="toolbar-card">
+        <div class="search-row">
+          <div class="search-input-wrap">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="7.5"></circle>
+              <line x1="20" y1="20" x2="16.4" y2="16.4"></line>
+            </svg>
+            <input type="search" id="venueSearchInput" class="search-input" placeholder="공연장명(구 대명, 구 아트원, 구 FAN스퀘어, 구 역삼 LG아트센터, 구 핸드볼), 역명, 버스번호 검색">
+            <button type="button" id="searchClearBtn" class="search-clear-btn" aria-label="검색어 지우기">✕</button>
+          </div>
+        </div>
+
+        <div class="filter-tabs-row">
+          <div class="tab-strip" id="filterTabs" role="tablist" aria-label="공연장 필터 탭">
+            <button type="button" class="filter-tab active" data-tab="all">전체 (34)</button>
+            <button type="button" class="filter-tab" data-tab="new2020">2020~2026 신설·이전 (8)</button>
+            <button type="button" class="filter-tab" data-tab="routes">상세 루트·꿀팁</button>
+            <button type="button" class="filter-tab" data-tab="daehakro">대학로</button>
+            <button type="button" class="filter-tab" data-tab="gangnam">강남·잠실·송파</button>
+            <button type="button" class="filter-tab" data-tab="city">강북·도심·신도림</button>
+            <button type="button" class="filter-tab" data-tab="concert">콘서트홀·아레나</button>
+          </div>
+          <span class="filter-status-txt" id="filterStatusTxt">인덱스 <strong>34</strong>곳</span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Empty Search State -->
+    <div class="empty-search-box" id="emptySearchBox">
+      <strong>조건에 일치하는 공연장 또는 경로가 없습니다.</strong>
+      <p style="margin:6px 0 12px;font-size:12.5px;">다른 역명·공연장명으로 검색하거나 필터를 초기화해 보세요.</p>
+      <button type="button" class="btn-dc-outline" id="resetFiltersBtn">필터 초기화</button>
+    </div>
+
+    <!-- ====================================================================
+         3. Section 1 — 2020~2026 신설·이전·리뉴얼 공연장 & 콘서트홀 (8곳)
+         ==================================================================== -->
+    <section class="guide-section" id="secNewVenues">
+      <div class="sec-header">
+        <h2 class="sec-title">2020~2026 신설 · 이전 · 리뉴얼 공연장 &amp; 콘서트홀 (8곳)</h2>
+        <span class="sec-count-badge" id="sec1CountBadge">8곳</span>
+      </div>
+
+      <div class="venue-cards-grid">
+        <!-- 1. LG아트센터 서울 (마곡) -->
+        <article class="venue-card is-new-card filterable-card" data-sec="1" data-tags="new2020 concert" data-keywords="LG아트센터 서울 마곡 마곡나루역 9호선 공항철도 3번출구 4번출구 지하연결통로 급행 환승 2022">
+          <div class="vc-top">
+            <div class="vc-title-row">
+              <div>
+                <h3 class="vc-name">LG아트센터 서울 (마곡)</h3>
+                <div class="vc-sub">2022년 이전 개관 · 마곡나루역 지하 직결</div>
+              </div>
+              <span class="new-badge">NEW</span>
+            </div>
+            <div class="vc-station-bar">
+              <span class="line-badge line-9">9호선</span>
+              <span class="line-badge line-arex">공항철도</span>
+              <span class="vc-station-name">마곡나루역</span>
+              <span class="exit-badge">3·4번 출구</span>
+            </div>
+            <div class="vc-steps">
+              <div class="vc-step-line"><strong>4번 출구 지하 연결통로 직결</strong> (3·4번 출구 방면 지하 전용문으로 바로 진입 가능).</div>
+              <div class="vc-step-line"><strong>공항철도 / 9호선 급행 환승 팁:</strong> 공항철도 하차 시 가장 빠르며, 9호선 급행 정차역으로 강남권 이동 단축 (9호선 하차 시 공항철도 환승통로를 거쳐야 하므로 도보 10~15분 여유 권장).</div>
+            </div>
+          </div>
+          <div class="vc-footer">
+            <span class="vc-summary-note">4번 출구 지하 연결통로 직결</span>
+            <button type="button" class="btn-copy-mini" data-copy-text="[LG아트센터 서울 (마곡)] 9호선·공항철도 마곡나루역 3·4번 출구 (4번 출구 지하 연결통로 직결)">역·출구 복사</button>
+          </div>
+        </article>
+
+        <!-- 2. GS아트센터 (역삼) -->
+        <article class="venue-card is-new-card filterable-card" data-sec="1" data-tags="new2020 gangnam" data-keywords="GS아트센터 역삼 구 역삼 LG아트센터 자리 2025년 개관 2호선 역삼역 7번출구 8번출구 지하 내부연결통로 엘리베이터 에스컬레이터 1층 매표소">
+          <div class="vc-top">
+            <div class="vc-title-row">
+              <div>
+                <h3 class="vc-name">GS아트센터 (역삼)</h3>
+                <div class="vc-sub">구 역삼 LG아트센터 자리 · 2025년 개관</div>
+              </div>
+              <span class="new-badge">NEW</span>
+            </div>
+            <div class="vc-station-bar">
+              <span class="line-badge line-2">2호선</span>
+              <span class="vc-station-name">역삼역</span>
+              <span class="exit-badge">7번 · 8번 출구</span>
+            </div>
+            <div class="vc-steps">
+              <div class="vc-step-line"><strong>7번 출구:</strong> 지하 내부 연결통로 + 빌딩 엘리베이터·에스컬레이터 이용.</div>
+              <div class="vc-step-line"><strong>8번 출구:</strong> 지상으로 나와 바로 왼쪽으로 꺾으면 <strong>1층 매표소 직통</strong> (공연 임박 시 엘리베이터 대기 회피에 유리).</div>
+            </div>
+          </div>
+          <div class="vc-footer">
+            <span class="vc-summary-note">7번(지하연결) / 8번(1층 매표소)</span>
+            <button type="button" class="btn-copy-mini" data-copy-text="[GS아트센터 (구 역삼 LG아트센터)] 2호선 역삼역 7번 출구(지하연결) / 8번 출구(지상 좌측 1층 매표소)">역·출구 복사</button>
+          </div>
+        </article>
+
+        <!-- 3. 링크아트센터 & 링크아트센터드림 (대학로) -->
+        <article class="venue-card is-new-card filterable-card" data-sec="1" data-tags="new2020 daehakro" data-keywords="링크아트센터 링크아트센터드림 대학로 4호선 혜화역 1번출구 2번출구 벅스홀 페이코홀 드림1관 드림2관 드림3관 드림4관">
+          <div class="vc-top">
+            <div class="vc-title-row">
+              <div>
+                <h3 class="vc-name">링크아트센터 &amp; 링크아트센터드림</h3>
+                <div class="vc-sub">대학로 신설 중·소극장 (벅스·페이코 / 드림1~4관)</div>
+              </div>
+              <span class="new-badge">NEW</span>
+            </div>
+            <div class="vc-station-bar">
+              <span class="line-badge line-4">4호선</span>
+              <span class="vc-station-name">혜화역</span>
+              <span class="exit-badge">1번 · 2번 출구</span>
+            </div>
+            <div class="vc-steps">
+              <div class="vc-step-line"><strong>링크아트센터:</strong> 4호선 혜화역 <strong>1번 출구</strong> 도보 3~4분.</div>
+              <div class="vc-step-line"><strong>링크아트센터드림:</strong> 4호선 혜화역 <strong>2번 출구</strong> 도보 5분.</div>
+            </div>
+          </div>
+          <div class="vc-footer">
+            <span class="vc-summary-note">링크 1번(3~4분) / 드림 2번(5분)</span>
+            <button type="button" class="btn-copy-mini" data-copy-text="[링크아트센터 & 링크아트센터드림] 4호선 혜화역 1번 출구 도보 3~4분(링크) / 2번 출구 도보 5분(드림)">역·출구 복사</button>
+          </div>
+        </article>
+
+        <!-- 4. 인스파이어 아레나 (영종도) -->
+        <article class="venue-card is-new-card filterable-card" data-sec="1" data-tags="new2020 concert" data-keywords="인스파이어 아레나 영종도 공항철도 인천공항2터미널역 1층 셔틀버스 공항화물청사역 무료 순환 셔틀">
+          <div class="vc-top">
+            <div class="vc-title-row">
+              <div>
+                <h3 class="vc-name">인스파이어 아레나 (영종도)</h3>
+                <div class="vc-sub">대형 콘서트·시상식 전용 아레나</div>
+              </div>
+              <span class="new-badge">NEW</span>
+            </div>
+            <div class="vc-station-bar">
+              <span class="line-badge line-arex">공항철도</span>
+              <span class="vc-station-name">인천공항2터미널역 · 공항화물청사역</span>
+            </div>
+            <div class="vc-steps">
+              <div class="vc-step-line"><strong>인천공항2터미널역 1층 셔틀버스</strong> 또는 <strong>공항화물청사역 무료 순환 셔틀</strong> 이용 (약 10~15분 소요).</div>
+              <div class="caution-box"><span class="caution-badge">셔틀 팁</span>공연 종료 후 귀가 셔틀 대기열이 매우 길어지므로, 공항철도 막차 시간 확인 및 퇴장 동선 선점이 필수입니다.</div>
+            </div>
+          </div>
+          <div class="vc-footer">
+            <span class="vc-summary-note">2터미널 1층 / 공항화물청사역 무료 셔틀</span>
+            <button type="button" class="btn-copy-mini" data-copy-text="[인스파이어 아레나 (영종도)] 공항철도 인천공항2터미널역 1층 셔틀 / 공항화물청사역 무료 순환 셔틀">역·출구 복사</button>
+          </div>
+        </article>
+
+        <!-- 5. 부천아트센터 (2023년 개관) -->
+        <article class="venue-card is-new-card filterable-card" data-sec="1" data-tags="new2020 concert" data-keywords="부천아트센터 2023년 개관 7호선 부천시청역 1번출구 중앙공원 최단 동선 콘서트홀">
+          <div class="vc-top">
+            <div class="vc-title-row">
+              <div>
+                <h3 class="vc-name">부천아트센터</h3>
+                <div class="vc-sub">2023년 개관 · 클래식 전용 콘서트홀</div>
+              </div>
+              <span class="new-badge">NEW</span>
+            </div>
+            <div class="vc-station-bar">
+              <span class="line-badge line-7">7호선</span>
+              <span class="vc-station-name">부천시청역</span>
+              <span class="exit-badge">1번 출구 (도보 7~8분)</span>
+            </div>
+            <div class="vc-steps">
+              <div class="vc-step-line">7호선 <strong>부천시청역 1번 출구</strong>로 나와 <strong>중앙공원을 가로지르는 최단 동선</strong> 이용 시 도보 7~8분 도착.</div>
+            </div>
+          </div>
+          <div class="vc-footer">
+            <span class="vc-summary-note">1번 출구 → 중앙공원 가로지르기 최단</span>
+            <button type="button" class="btn-copy-mini" data-copy-text="[부천아트센터] 7호선 부천시청역 1번 출구 도보 7~8분 (중앙공원 가로지르는 최단 동선)">역·출구 복사</button>
+          </div>
+        </article>
+
+        <!-- 6. 국립정동극장 세실 (2022년 재개관) -->
+        <article class="venue-card is-new-card filterable-card" data-sec="1" data-tags="new2020 city" data-keywords="국립정동극장 세실 2022년 재개관 1호선 2호선 시청역 3번출구 5호선 광화문역 6번출구">
+          <div class="vc-top">
+            <div class="vc-title-row">
+              <div>
+                <h3 class="vc-name">국립정동극장 세실</h3>
+                <div class="vc-sub">2022년 재개관 · 덕수궁 인근 도심 극장</div>
+              </div>
+              <span class="new-badge">NEW</span>
+            </div>
+            <div class="vc-station-bar">
+              <span class="line-badge line-1">1호선</span>
+              <span class="line-badge line-2">2호선</span>
+              <span class="vc-station-name">시청역</span>
+              <span class="exit-badge">3번 출구</span>
+              <span class="line-badge line-5">5호선</span>
+              <span class="vc-station-name">광화문역</span>
+              <span class="exit-badge">6번 출구</span>
+            </div>
+            <div class="vc-steps">
+              <div class="vc-step-line"><strong>시청역 3번 출구:</strong> 도보 3분 최단거리.</div>
+              <div class="vc-step-line"><strong>광화문역 6번 출구:</strong> 도보 6분 직진 연결.</div>
+            </div>
+          </div>
+          <div class="vc-footer">
+            <span class="vc-summary-note">시청역 3번(3분) / 광화문역 6번(6분)</span>
+            <button type="button" class="btn-copy-mini" data-copy-text="[국립정동극장 세실] 1·2호선 시청역 3번 출구 도보 3분 / 5호선 광화문역 6번 출구 도보 6분">역·출구 복사</button>
+          </div>
+        </article>
+
+        <!-- 7. 코엑스 신한카드 아티움 (구 SM타운) -->
+        <article class="venue-card is-new-card filterable-card" data-sec="1" data-tags="new2020 gangnam" data-keywords="코엑스 신한카드 아티움 구 SM타운 2호선 삼성역 5번출구 6번출구 밀레니엄광장 연결통로 9호선 봉은사역 7번출구">
+          <div class="vc-top">
+            <div class="vc-title-row">
+              <div>
+                <h3 class="vc-name">코엑스 신한카드 아티움</h3>
+                <div class="vc-sub">구 SM타운 · 코엑스몰 5층 리뉴얼</div>
+              </div>
+              <span class="new-badge">NEW</span>
+            </div>
+            <div class="vc-station-bar">
+              <span class="line-badge line-2">2호선</span>
+              <span class="vc-station-name">삼성역</span>
+              <span class="exit-badge">5·6번 출구</span>
+              <span class="line-badge line-9">9호선</span>
+              <span class="vc-station-name">봉은사역</span>
+              <span class="exit-badge">7번 출구</span>
+            </div>
+            <div class="vc-steps">
+              <div class="vc-step-line"><strong>삼성역 5·6번 출구:</strong> 밀레니엄광장 지하 연결통로 진입 후 코엑스 아티움 5층 이동.</div>
+              <div class="vc-step-line"><strong>봉은사역 7번 출구:</strong> 9호선 이용 시 코엑스몰 북측 연결통로로 접근 가능.</div>
+            </div>
+          </div>
+          <div class="vc-footer">
+            <span class="vc-summary-note">삼성 5·6번 밀레니엄광장 / 봉은사 7번</span>
+            <button type="button" class="btn-copy-mini" data-copy-text="[코엑스 신한카드 아티움 (구 SM타운)] 2호선 삼성역 5·6번 출구 밀레니엄광장 연결통로 / 9호선 봉은사역 7번 출구">역·출구 복사</button>
+          </div>
+        </article>
+
+        <!-- 8. 올림픽공원 공연장 (KSPO DOME · 올림픽홀 · 티켓링크 라이브 아레나) -->
+        <article class="venue-card is-new-card filterable-card" data-sec="1" data-tags="new2020 gangnam concert" data-keywords="올림픽공원 공연장 KSPO DOME 체조경기장 올림픽홀 티켓링크 라이브 아레나 구 핸드볼경기장 5호선 9호선 올림픽공원역 3번출구 4번출구 급행">
+          <div class="vc-top">
+            <div class="vc-title-row">
+              <div>
+                <h3 class="vc-name">올림픽공원 공연장</h3>
+                <div class="vc-sub">KSPO DOME · 올림픽홀 · 티켓링크 라이브 아레나(구 핸드볼)</div>
+              </div>
+              <span class="new-badge">NEW</span>
+            </div>
+            <div class="vc-station-bar">
+              <span class="line-badge line-5">5호선</span>
+              <span class="line-badge line-9">9호선</span>
+              <span class="vc-station-name">올림픽공원역</span>
+              <span class="exit-badge">3·4번 출구</span>
+            </div>
+            <div class="vc-steps">
+              <div class="vc-step-line"><strong>3번 출구:</strong> KSPO DOME(체조경기장) · 티켓링크 라이브 아레나(구 핸드볼경기장) 최단거리.</div>
+              <div class="vc-step-line"><strong>4번 출구:</strong> 올림픽홀 최단거리 (9호선 급행 정차역으로 빠른 환승 가능).</div>
+            </div>
+          </div>
+          <div class="vc-footer">
+            <span class="vc-summary-note">3번(KSPO·핸드볼) / 4번(올림픽홀)</span>
+            <button type="button" class="btn-copy-mini" data-copy-text="[올림픽공원 공연장] 5·9호선 올림픽공원역 3번 출구(KSPO DOME·핸드볼) / 4번 출구(올림픽홀)">역·출구 복사</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         4. Section 2 — 연뮤갤 검증 상세 루트 & 버스·환승 꿀팁
+         ==================================================================== -->
+    <section class="guide-section" id="secVerifiedRoutes">
+      <div class="sec-header">
+        <h2 class="sec-title">연뮤갤 검증 상세 루트 &amp; 버스·환승 꿀팁</h2>
+        <span class="sec-count-badge" id="sec2CountBadge">5개 상세 루트</span>
+      </div>
+
+      <div class="venue-cards-grid single-col">
+        <!-- 1. 디큐브 링크아트센터 (신도림역 1번 출구) -->
+        <article class="venue-card is-route-card filterable-card" data-sec="2" data-tags="routes city" data-keywords="디큐브 링크아트센터 구 디큐브아트센터 신도림역 1호선 2호선 지선 까치산 3-4 6-4 1번출구 개찰구 편의점 하나은행 회전문 7층 엘리베이터">
+          <div class="vc-top">
+            <div class="vc-title-row">
+              <div>
+                <h3 class="vc-name">디큐브 링크아트센터 (구 디큐브아트센터)</h3>
+                <div class="vc-sub">신도림 지선 빠른칸 + 7층 지정 엘리베이터 최단 루트</div>
+              </div>
+              <span class="tag-muted">빠른칸 · 엘베</span>
+            </div>
+            <div class="vc-station-bar">
+              <span class="line-badge line-1">1호선</span>
+              <span class="line-badge line-2">2호선</span>
+              <span class="vc-station-name">신도림역</span>
+              <span class="exit-badge">1번 출구</span>
+              <span class="exit-badge" style="background:#EFF9F3;border-color:#BCE3CB;color:#2E8B57;">지선 빠른칸: 3-4 / 6-4</span>
+            </div>
+            <div class="vc-steps">
+              <div class="vc-step-line">2호선 지선(까치산→신도림) 신도림행 기준 <strong>3-4 칸</strong>이 제일 빠름 (계단 우회 고려 시 <strong>6-4 칸</strong>도 추천).</div>
+              <div class="step-flow">
+                <span class="step-chip">1번 출구 방향</span>
+                <span class="step-arrow">→</span>
+                <span class="step-chip">개찰구 나와 바로 왼쪽</span>
+                <span class="step-arrow">→</span>
+                <span class="step-chip">편의점 사이 하나은행 쪽 회전문</span>
+                <span class="step-arrow">→</span>
+                <span class="step-chip">엘베 앞 표시판 7층 누르고 안내 엘리베이터 탑승</span>
+              </div>
+            </div>
+          </div>
+          <div class="vc-footer">
+            <span class="vc-summary-note">지선 3-4 / 6-4 · 하나은행 회전문 → 7층 엘베</span>
+            <button type="button" class="btn-copy-mini" data-copy-text="[디큐브 링크아트센터] 신도림역 1번 출구(지선 3-4/6-4) → 하나은행 쪽 회전문 → 7층 안내 엘베">루트 복사</button>
+          </div>
+        </article>
+
+        <!-- 2. 홍익대 대학로 아트센터 (종로5가역 · 혜화역 버스 환승) -->
+        <article class="venue-card is-route-card filterable-card" data-sec="2" data-tags="routes daehakro" data-keywords="홍익대 대학로 아트센터 홍아센 종로5가역 1호선 2번출구 3번출구 01-725 01-205 종로08번 종로03번 7025번 이화사거리 이화동 이화장 혜화역 4호선 3번 4번 종로07번 초록 파랑 버스">
+          <div class="vc-top">
+            <div class="vc-title-row">
+              <div>
+                <h3 class="vc-name">홍익대 대학로 아트센터 (홍아센)</h3>
+                <div class="vc-sub">한파·폭염 대비 종로5가역 &amp; 혜화역 버스 환승 완벽 가이드</div>
+              </div>
+              <span class="tag-muted">버스 환승 꿀팁</span>
+            </div>
+            <div class="vc-station-bar">
+              <span class="line-badge line-1">1호선</span>
+              <span class="vc-station-name">종로5가역</span>
+              <span class="exit-badge">2번(도보) · 3번(버스) 출구</span>
+              <span class="line-badge line-4">4호선</span>
+              <span class="vc-station-name">혜화역</span>
+              <span class="exit-badge">3·4번 출구</span>
+            </div>
+            <div class="vc-steps">
+              <div class="bus-box">
+                <div class="bus-box-title">① 종로5가역 3번 출구 (도보 90~100m 정류장 01-725)</div>
+                <div><span class="bus-num-tag">종로08번</span> <span class="bus-num-tag">종로03번</span> → 2정거장 <strong>이화사거리</strong> 하차 (횡단보도 2회)</div>
+                <div style="color:#2B59C3;font-weight:700;">※ 종로08번은 3정거장 이동 후 하차 시 횡단보도 1회만 건너도 됩니다!</div>
+              </div>
+              <div class="bus-box">
+                <div class="bus-box-title">② 종로5가역 3번 출구 (도보 260m 정류장 01-205)</div>
+                <div><span class="bus-num-tag blue">7025번</span> → 2정거장 <strong>이화동(이화장)</strong> 하차 → <strong>공연장 100m 앞 (횡단보도 없음)</strong></div>
+              </div>
+              <div class="bus-box">
+                <div class="bus-box-title">③ 혜화역 3·4번 출구 (버스 5분 이내 도착 시 탑승 추천)</div>
+                <div><span class="bus-num-tag">종로08번</span> 바로 앞 하차 / <span class="bus-num-tag">종로07번</span> · 초록/파랑버스 하차 후 도보 1분</div>
+              </div>
+            </div>
+          </div>
+          <div class="vc-footer">
+            <span class="vc-summary-note">7025번 이화동 하차 시 횡단보도 0회</span>
+            <button type="button" class="btn-copy-mini" data-copy-text="[홍익대 대학로 아트센터] 종로5가 3번출구(종로08·03 / 7025번 이화동 하차) · 혜화 3·4번출구(종로08)">루트 복사</button>
+          </div>
+        </article>
+
+        <!-- 3. 샤롯데씨어터 (잠실역 3번 출구) -->
+        <article class="venue-card is-route-card filterable-card" data-sec="2" data-tags="routes gangnam" data-keywords="샤롯데씨어터 잠실역 2호선 8호선 3번출구 롯데리아 크리스피 호텔 계단 물품보관소 닫혀">
+          <div class="vc-top">
+            <div class="vc-title-row">
+              <div>
+                <h3 class="vc-name">샤롯데씨어터 (잠실역)</h3>
+                <div class="vc-sub">3번 출구 호텔 실내 우회 동선 &amp; 연결문 개폐 주의</div>
+              </div>
+              <span class="tag-muted">주의사항 필독</span>
+            </div>
+            <div class="vc-station-bar">
+              <span class="line-badge line-2">2호선</span>
+              <span class="line-badge line-8">8호선</span>
+              <span class="vc-station-name">잠실역</span>
+              <span class="exit-badge">3번 출구</span>
+            </div>
+            <div class="vc-steps">
+              <div class="step-flow">
+                <span class="step-chip">3번 출구 방향</span>
+                <span class="step-arrow">→</span>
+                <span class="step-chip">롯데리아-크리스피 사이 길</span>
+                <span class="step-arrow">→</span>
+                <span class="step-chip">호텔 가는 길 계단</span>
+                <span class="step-arrow">→</span>
+                <span class="step-chip">왼쪽 문 → 오른쪽 건물 진입</span>
+                <span class="step-arrow">→</span>
+                <span class="step-chip">호텔 끄트머리 문 → 짧은 횡단보도 → 샤롯데 물품보관소</span>
+              </div>
+              <div class="caution-box"><span class="caution-badge">주의</span>최근 호텔 끄트머리 출구 → 샤롯데 물품보관소 방향 문은 높은 확률로 닫혀 있음</div>
+            </div>
+          </div>
+          <div class="vc-footer">
+            <span class="vc-summary-note">호텔 연결문 폐쇄 시 3번 출구 지상 직진</span>
+            <button type="button" class="btn-copy-mini" data-copy-text="[샤롯데씨어터] 잠실역 3번 출구 (주의: 최근 호텔 끝→물품보관소 방향 문 닫혀있을 확률 높음)">루트 복사</button>
+          </div>
+        </article>
+
+        <!-- 4. 충무아트센터 (신당역 · 동대문역사문화공원역) -->
+        <article class="venue-card is-route-card filterable-card" data-sec="2" data-tags="routes city" data-keywords="충무아트센터 구 충무아트홀 신당역 2호선 6호선 1번출구 9번출구 동대문역사문화공원역 4호선 5호선 2번출구 버스 2013">
+          <div class="vc-top">
+            <div class="vc-title-row">
+              <div>
+                <h3 class="vc-name">충무아트센터 (구 충무아트홀)</h3>
+                <div class="vc-sub">신당역 1번 출구 버스 환승 꿀팁 &amp; 도보 빠른출구</div>
+              </div>
+              <span class="tag-muted">버스 환승 꿀팁</span>
+            </div>
+            <div class="vc-station-bar">
+              <span class="line-badge line-2">2호선</span>
+              <span class="line-badge line-6">6호선</span>
+              <span class="vc-station-name">신당역</span>
+              <span class="exit-badge">1번(버스) · 9번(도보) 출구</span>
+              <span class="line-badge line-2">2호선</span>
+              <span class="line-badge line-4">4호선</span>
+              <span class="line-badge line-5">5호선</span>
+              <span class="vc-station-name">동대문역사문화공원역</span>
+              <span class="exit-badge">2번 출구</span>
+            </div>
+            <div class="vc-steps">
+              <div class="bus-box">
+                <div class="bus-box-title">2호선 신당역 1번 출구 바로 옆 버스정류장 꿀팁</div>
+                <div>정차하는 버스 8대 중 <strong>2013번 제외 전부 충무아트센터 경유!</strong> 아무거나 먼저 오는 버스 탑승하면 가장 빠릅니다.</div>
+              </div>
+              <div class="vc-step-line">도보 이동 시: <strong>신당역 9번 출구</strong> 또는 <strong>동대문역사문화공원역 2번 출구</strong> 이용.</div>
+            </div>
+          </div>
+          <div class="vc-footer">
+            <span class="vc-summary-note">신당 1번 버스(2013 제외 전부 경유)</span>
+            <button type="button" class="btn-copy-mini" data-copy-text="[충무아트센터] 신당역 1번 출구 옆 버스(2013 제외 전부 경유) / 도보 신당역 9번·동역사 2번 출구">루트 복사</button>
+          </div>
+        </article>
+
+        <!-- 5. 신한카드 SOL페이 스퀘어 · 우란2경 · 국립정동극장 -->
+        <article class="venue-card is-route-card filterable-card" data-sec="2" data-tags="routes city" data-keywords="신한카드 SOL페이 스퀘어 구 FAN스퀘어홀 합정역 2호선 6호선 9번출구 메세나폴리스몰 연결통로 우란문화재단 우란2경 성수역 4번출구 국립정동극장 시청역 1호선 1번 11번 12번 출구">
+          <div class="vc-top">
+            <div class="vc-title-row">
+              <div>
+                <h3 class="vc-name">신한카드 SOL페이 스퀘어 · 우란2경 · 국립정동극장</h3>
+                <div class="vc-sub">합정 · 성수 · 시청 핵심 빠른출구 모음</div>
+              </div>
+              <span class="tag-muted">도심·강북권</span>
+            </div>
+            <div class="vc-station-bar">
+              <span class="line-badge line-2">2호선</span>
+              <span class="line-badge line-6">6호선</span>
+              <span class="vc-station-name">합정역</span>
+              <span class="exit-badge">9번 출구</span>
+              <span class="line-badge line-2">2호선</span>
+              <span class="vc-station-name">성수역</span>
+              <span class="exit-badge">4번 출구</span>
+              <span class="line-badge line-1">1호선</span>
+              <span class="line-badge line-2">2호선</span>
+              <span class="vc-station-name">시청역</span>
+              <span class="exit-badge">1·11·12번 출구</span>
+            </div>
+            <div class="vc-steps">
+              <div class="vc-step-line"><strong>신한카드 SOL페이 스퀘어 (구 FAN스퀘어홀):</strong> 합정역 <strong>9번 출구 메세나폴리스몰 연결통로</strong> 직결.</div>
+              <div class="vc-step-line"><strong>우란문화재단 우란2경:</strong> 2호선 성수역 <strong>4번 출구</strong>.</div>
+              <div class="vc-step-line"><strong>국립정동극장:</strong> 1·2호선 시청역 <strong>1·11·12번 출구</strong> 골라서 덕수궁 돌담길 진입.</div>
+            </div>
+          </div>
+          <div class="vc-footer">
+            <span class="vc-summary-note">합정 9번(메세나폴리스) / 성수 4번 / 시청 1·11·12번</span>
+            <button type="button" class="btn-copy-mini" data-copy-text="[SOL페이 스퀘어] 합정역 9번(메세나폴리스) / [우란2경] 성수역 4번 / [국립정동극장] 시청역 1·11·12번">역·출구 복사</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         5. Section 3 — 전체 공연장 빠른출구 원클릭 인덱스 (34곳)
+         ==================================================================== -->
+    <section class="guide-section" id="secVenueIndex">
+      <div class="sec-header">
+        <h2 class="sec-title">전체 공연장 빠른출구 원클릭 인덱스 (34곳)</h2>
+        <span class="sec-count-badge" id="sec3CountBadge">34곳</span>
+      </div>
+
+      <div class="index-hint">
+        <span>어느 행이든 클릭하면 <strong>[공연장명] 역명 · 빠른출구 · 핵심 메모</strong>가 클립보드에 자동 복사됩니다.</span>
+        <span style="color:var(--dc-navy);font-weight:700;">구 명칭(대명, 아트원, FAN스퀘어 등) 검색 지원</span>
+      </div>
+
+      <div class="index-table-wrap">
+        <table class="index-table" aria-label="전체 34개 공연장 빠른출구 인덱스">
+          <thead>
+            <tr>
+              <th style="width:28%;">공연장명</th>
+              <th style="width:23%;">지하철역</th>
+              <th style="width:17%;">빠른 출구</th>
+              <th style="width:25%;">핵심 메모</th>
+              <th style="width:7%;text-align:right;">복사</th>
+            </tr>
+          </thead>
+          <tbody id="venueIndexTbody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         6. Section 4 — 새로운 빠른칸 · 출구 제보 보드 & 게시글용 텍스트 복사
+         ==================================================================== -->
+    <section class="guide-section" id="secContribution">
+      <div class="sec-header">
+        <h2 class="sec-title">새로운 빠른칸 · 출구 제보 보드</h2>
+        <span class="sec-count-badge" id="userTipsCountBadge">0건</span>
+      </div>
+
+      <!-- User Submitted Tips List -->
+      <div class="user-tips-list" id="userTipsList"></div>
+
+      <!-- Interactive Submission Form -->
+      <form class="tip-form" id="tipSubmitForm">
+        <div class="tip-form-title">새로운 빠른칸 · 출구 · 버스 환승 꿀팁 남기기</div>
+        <div class="tip-form-row">
+          <input type="text" id="tipVenueInput" class="form-input" maxlength="40" placeholder="공연장명 (예: LG아트센터 서울)" required>
+          <input type="text" id="tipStationInput" class="form-input" maxlength="45" placeholder="역 · 빠른칸 · 출구 (예: 마곡나루역 4번출구)" required>
+          <input type="text" id="tipNickInput" class="form-input" maxlength="12" value="ㅇㅇ" placeholder="닉네임">
+        </div>
+        <textarea id="tipDetailInput" class="form-textarea" maxlength="300" placeholder="직접 가본 빠른 동선, 계단/엘리베이터 위치, 버스 환승 꿀팁을 적어주세요." required></textarea>
+        <div class="tip-form-actions">
+          <span style="font-size:11.5px;color:var(--text-muted);">※ 등록한 제보는 현재 브라우저(localStorage)에 저장됩니다.</span>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;">
+            <button type="button" class="btn-dc-outline" id="copyCommentTipBtn">댓글 제보용 복사</button>
+            <button type="submit" class="btn-dc-primary">제보 등록</button>
+          </div>
+        </div>
+      </form>
+
+      <div class="bottom-copy-bar">
+        <span style="font-size:12px;color:var(--text-muted);">갤러리 본문 공유가 필요할 때 아래 버튼으로 전체 요약 텍스트를 복사할 수 있습니다.</span>
+        <button type="button" class="btn-dc-outline" id="copyFullGuideBtn">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          <span>게시글용 텍스트 복사</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Official Main Gallery Footer -->
+    <footer class="dc-footer">
+      연극, 뮤지컬 갤러리 · 공연장 빠른길 아카이브 (2026 업데이트)
+    </footer>
+  </main>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    (function () {
+      'use strict';
+
+      const TIPS_STORAGE_KEY = 'yeonmu_main_gallery_tips_v2';
+
+      /* ======================================================================
+         1. Complete 34-Venue Master Index Data
+         ====================================================================== */
+      const VENUE_INDEX_DATA = [
+        // 2020~2026 신설·이전·리뉴얼 (8곳)
+        { name: 'LG아트센터 서울 (마곡)', old: '2022년 이전 개관', lines: ['9호선', '공항철도'], station: '마곡나루역', exit: '3·4번 출구', tip: '4번 출구 지하 연결통로 직결 (9호선 급행 정차)', tags: ['new2020', 'concert'], isNew: true },
+        { name: 'GS아트센터 (역삼)', old: '구 역삼 LG아트센터 자리 · 2025년 개관', lines: ['2호선'], station: '역삼역', exit: '7번 · 8번 출구', tip: '7번 지하연결(엘베·에스컬레이터) / 8번 지상 좌측 1층 매표소', tags: ['new2020', 'gangnam'], isNew: true },
+        { name: '링크아트센터', old: '대학로 신설 (벅스홀·페이코홀)', lines: ['4호선'], station: '혜화역', exit: '1번 출구', tip: '1번 출구 도보 3~4분', tags: ['new2020', 'daehakro'], isNew: true },
+        { name: '링크아트센터드림', old: '대학로 신설 (드림1~4관)', lines: ['4호선'], station: '혜화역', exit: '2번 출구', tip: '2번 출구 도보 5분', tags: ['new2020', 'daehakro'], isNew: true },
+        { name: '인스파이어 아레나 (영종도)', old: '대형 콘서트·시상식 아레나', lines: ['공항철도'], station: '인천공항2터미널역 · 공항화물청사역', exit: '1층 / 무료 셔틀', tip: '2터미널 1층 셔틀 또는 공항화물청사역 무료 순환 셔틀', tags: ['new2020', 'concert'], isNew: true },
+        { name: '부천아트센터', old: '2023년 개관 · 클래식 콘서트홀', lines: ['7호선'], station: '부천시청역', exit: '1번 출구', tip: '1번 출구 도보 7~8분 (중앙공원 가로지르는 최단 동선)', tags: ['new2020', 'concert'], isNew: true },
+        { name: '국립정동극장 세실', old: '2022년 재개관', lines: ['1호선', '2호선', '5호선'], station: '시청역 · 광화문역', exit: '시청 3번 / 광화문 6번', tip: '시청역 3번 도보 3분 / 광화문역 6번 도보 6분', tags: ['new2020', 'city'], isNew: true },
+        { name: '코엑스 신한카드 아티움', old: '구 SM타운 · 코엑스몰 5층', lines: ['2호선', '9호선'], station: '삼성역 · 봉은사역', exit: '삼성 5·6번 / 봉은사 7번', tip: '삼성역 5·6번 밀레니엄광장 연결통로 / 봉은사역 7번', tags: ['new2020', 'gangnam'], isNew: true },
+
+        // 콘서트홀 · 아레나 · 주요 공연장 (26곳)
+        { name: 'KSPO DOME (올림픽체조경기장)', old: '올림픽공원 대형 콘서트홀', lines: ['5호선', '9호선'], station: '올림픽공원역', exit: '3번 출구', tip: '9호선 급행 정차 · 3번 출구 최단거리', tags: ['gangnam', 'concert'], isNew: false },
+        { name: '올림픽홀', old: '올림픽공원 콘서트홀', lines: ['5호선', '9호선'], station: '올림픽공원역', exit: '4번 출구', tip: '9호선 급행 정차 · 4번 출구 최단거리', tags: ['gangnam', 'concert'], isNew: false },
+        { name: '티켓링크 라이브 아레나', old: '구 핸드볼경기장 (SK올림픽핸드볼)', lines: ['5호선', '9호선'], station: '올림픽공원역', exit: '3번 출구', tip: '3번 출구 KSPO DOME 방면 최단거리', tags: ['gangnam', 'concert'], isNew: false },
+        { name: '우리금융아트홀', old: '올림픽공원 뮤지컬·콘서트홀', lines: ['5호선', '9호선'], station: '올림픽공원역', exit: '3번 출구', tip: '3번 출구 도보 약 10분 (올림픽공원 동2문 방면)', tags: ['gangnam', 'concert'], isNew: false },
+        { name: '디큐브 링크아트센터', old: '구 디큐브아트센터', lines: ['1호선', '2호선'], station: '신도림역', exit: '1번 출구', tip: '지선 3-4 / 6-4 · 하나은행 회전문 → 7층 안내 엘베', tags: ['routes', 'city'], isNew: false },
+        { name: '홍익대 대학로 아트센터', old: '홍아센', lines: ['1호선', '4호선'], station: '종로5가역 · 혜화역', exit: '종5 2·3번 / 혜화 3·4번', tip: '종5 3번(종로08·03 / 7025번 이화동) · 혜화 3·4번(종로08)', tags: ['routes', 'daehakro'], isNew: false },
+        { name: '두산아트센터 연강홀', old: '종로5가 대표 극장', lines: ['1호선'], station: '종로5가역', exit: '1번 출구', tip: '1번 출구 도보 3분 직진', tags: ['daehakro'], isNew: false },
+        { name: '샤롯데씨어터', old: '잠실 뮤지컬 전용극장', lines: ['2호선', '8호선'], station: '잠실역', exit: '3번 출구', tip: '3번 출구 직진 (호텔 끝→물품보관소 문 폐쇄 주의)', tags: ['routes', 'gangnam'], isNew: false },
+        { name: '충무아트센터', old: '구 충무아트홀', lines: ['2호선', '6호선', '4호선'], station: '신당역 · 동역사역', exit: '신당 1·9번 / 동역사 2번', tip: '신당 1번 옆 버스 8대 중 2013 제외 전부 충무 경유', tags: ['routes', 'city'], isNew: false },
+        { name: '신한카드 SOL페이 스퀘어', old: '구 신한카드 FAN스퀘어홀', lines: ['2호선', '6호선'], station: '합정역', exit: '9번 출구', tip: '9번 출구 메세나폴리스몰 지하 연결통로 직결', tags: ['routes', 'city'], isNew: false },
+        { name: '우란문화재단 우란2경', old: '성수동 공연장', lines: ['2호선'], station: '성수역', exit: '4번 출구', tip: '4번 출구 도보 이동', tags: ['routes', 'city'], isNew: false },
+        { name: '국립정동극장', old: '덕수궁 돌담길', lines: ['1호선', '2호선'], station: '시청역', exit: '1·11·12번 출구', tip: '1·11·12번 출구 중 선택해 덕수궁 돌담길 진입', tags: ['routes', 'city'], isNew: false },
+        { name: 'KT&G 상상마당 대치아트홀', old: '삼성역 상상아트홀', lines: ['2호선'], station: '삼성역', exit: '2번 출구', tip: '2번 출구 도보 5분', tags: ['gangnam'], isNew: false },
+        { name: '백암아트홀', old: '삼성역 공연장', lines: ['2호선'], station: '삼성역', exit: '8번 출구', tip: '8번 출구 도보 3분', tags: ['gangnam'], isNew: false },
+        { name: '명동예술극장', old: '명동 중심 극장', lines: ['2호선', '4호선'], station: '을지로입구역 · 명동역', exit: '을입 5·6번 / 명동 7번', tip: '을지로입구 5·6번 또는 명동역 7번 출구 이용', tags: ['city'], isNew: false },
+        { name: '예술의전당 (오페라 · CJ토월극장)', old: '서초동 예술의전당', lines: ['3호선'], station: '남부터미널역', exit: '5번 출구', tip: '5번 출구 도보 또는 마을버스 서초22번 환승', tags: ['gangnam'], isNew: false },
+        { name: '예술의전당 콘서트홀', old: '서초동 클래식 콘서트홀', lines: ['3호선'], station: '남부터미널역', exit: '5번 출구', tip: '5번 출구 마을버스 서초22번 하차 후 음악당 진입', tags: ['gangnam', 'concert'], isNew: false },
+        { name: '이해랑예술극장', old: '동국대 내 공연장', lines: ['3호선'], station: '동대입구역', exit: '6번 출구', tip: '6번 출구 동국대 에스컬레이터·도보 연결', tags: ['city'], isNew: false },
+        { name: '국립극장 (해오름 · 달오름극장)', old: '남산 국립극장', lines: ['3호선'], station: '동대입구역', exit: '6번 출구', tip: '6번 출구 앞 국립극장 무료 셔틀버스 / 도보 12분', tags: ['city', 'concert'], isNew: false },
+        { name: '광림아트센터 BBCH홀', old: '압구정 광림아트센터', lines: ['3호선'], station: '압구정역', exit: '4번 출구', tip: '4번 출구 직진 후 우회전 도보 6분', tags: ['gangnam'], isNew: false },
+        { name: '국립중앙박물관 극장 용', old: '이촌동 박물관 극장', lines: ['4호선', '경의중앙'], station: '이촌역', exit: '2번 출구', tip: '2번 출구 박물관 나들길 지하 연결통로 직결', tags: ['city'], isNew: false },
+        { name: '예스24스테이지', old: '구 대명문화공장 (1·2·3관)', lines: ['4호선'], station: '혜화역', exit: '1번 · 4번 출구', tip: '1번 또는 4번 출구 도보 3분', tags: ['daehakro'], isNew: false },
+        { name: '예스24아트원', old: '구 아트원씨어터 (1·2·3관)', lines: ['4호선'], station: '혜화역', exit: '2번 · 3번 출구', tip: '2번 또는 3번 출구 마로니에공원 방면 도보 3분', tags: ['daehakro'], isNew: false },
+        { name: '세종문화회관 대극장 · S씨어터', old: '광화문 세종문화회관', lines: ['5호선'], station: '광화문역', exit: '대극장 8번 / S씨어터 1·8번', tip: '대극장 8번 출구 / S씨어터는 1·8번 출구가 제일 빠름', tags: ['city', 'concert'], isNew: false },
+        { name: '유니버설아트센터', old: '능동 어린이대공원 옆', lines: ['5호선'], station: '아차산역', exit: '4번 출구', tip: '4번 출구 도보 3분 직진', tags: ['city'], isNew: false },
+        { name: '블루스퀘어 · 성남아트센터', old: '한강진 블루스퀘어 / 이매 성남아트센터', lines: ['6호선', '수인분당'], station: '한강진역 · 이매역', exit: '한강진 2번 / 이매 1번', tip: '블루스퀘어 한강진 2번(지하직결) / 성남아트센터 이매 1번', tags: ['gangnam', 'concert'], isNew: false }
+      ];
+
+      /* Wait: let's separate 블루스퀘어 and 성남아트센터 cleanly so total is exact 34!
+         Let's adjust 예술의전당 into 1 row so 블루스퀘어 and 성남아트센터 each get their own clean row. */
+      VENUE_INDEX_DATA.splice(23, 2, {
+        name: '예술의전당 (오페라·CJ토월·콘서트홀)',
+        old: '서초동 예술의전당',
+        lines: ['3호선'],
+        station: '남부터미널역',
+        exit: '5번 출구',
+        tip: '5번 출구 도보 또는 마을버스 서초22번 환승',
+        tags: ['gangnam', 'concert'],
+        isNew: false
+      });
+      VENUE_INDEX_DATA.pop(); // remove combined 블루스퀘어·성남아트센터
+      VENUE_INDEX_DATA.push(
+        { name: '블루스퀘어 (신한·마스터카드홀)', old: '한남동 블루스퀘어', lines: ['6호선'], station: '한강진역', exit: '2번 출구', tip: '2번 출구 지하 연결통로 직결', tags: ['gangnam', 'concert'], isNew: false },
+        { name: '성남아트센터 (오페라·콘서트홀)', old: '분당 성남아트센터', lines: ['수인분당'], station: '이매역', exit: '1번 출구', tip: '1번 출구 도보 5분 이동', tags: ['concert'], isNew: false }
+      );
+
+      /* App State */
+      const state = {
+        query: '',
+        activeTab: 'all',
+        userTips: loadUserTips()
+      };
+
+      /* DOM Elements */
+      const venueSearchInput = document.getElementById('venueSearchInput');
+      const searchClearBtn = document.getElementById('searchClearBtn');
+      const filterTabs = document.getElementById('filterTabs');
+      const filterStatusTxt = document.getElementById('filterStatusTxt');
+      const emptySearchBox = document.getElementById('emptySearchBox');
+      const resetFiltersBtn = document.getElementById('resetFiltersBtn');
+
+      const secNewVenues = document.getElementById('secNewVenues');
+      const secVerifiedRoutes = document.getElementById('secVerifiedRoutes');
+      const secVenueIndex = document.getElementById('secVenueIndex');
+      const sec1CountBadge = document.getElementById('sec1CountBadge');
+      const sec2CountBadge = document.getElementById('sec2CountBadge');
+      const sec3CountBadge = document.getElementById('sec3CountBadge');
+      const venueIndexTbody = document.getElementById('venueIndexTbody');
+
+      const userTipsList = document.getElementById('userTipsList');
+      const userTipsCountBadge = document.getElementById('userTipsCountBadge');
+      const tipSubmitForm = document.getElementById('tipSubmitForm');
+      const copyCommentTipBtn = document.getElementById('copyCommentTipBtn');
+      const copyFullGuideBtn = document.getElementById('copyFullGuideBtn');
+      const toastEl = document.getElementById('toast');
+
+      let toastTimer = null;
+
+      /* Storage & Formatting Helpers */
+      function loadUserTips() {
+        try {
+          const raw = localStorage.getItem(TIPS_STORAGE_KEY);
+          return raw ? JSON.parse(raw) : [];
+        } catch (err) {
+          return [];
+        }
+      }
+
+      function saveUserTips(list) {
+        try {
+          localStorage.setItem(TIPS_STORAGE_KEY, JSON.stringify(list));
+        } catch (err) {
+          // Ignore storage restrictions in sandboxed environments
+        }
+      }
+
+      function escapeHtml(str) {
+        return String(str || '')
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+      }
+
+      function showToast(msg) {
+        toastEl.textContent = msg;
+        toastEl.classList.add('show');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(function () {
+          toastEl.classList.remove('show');
+        }, 2300);
+      }
+
+      /* Robust Clipboard Copy (Works cleanly in Iframes & Standalone) */
+      function copyToClipboard(text, successMsg) {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.setAttribute('readonly', '');
+        ta.style.position = 'fixed';
+        ta.style.top = '-9999px';
+        ta.style.left = '-9999px';
+        document.body.appendChild(ta);
+        ta.select();
+        ta.setSelectionRange(0, ta.value.length);
+
+        let copied = false;
+        try {
+          copied = document.execCommand('copy');
+        } catch (err) {
+          copied = false;
+        }
+        document.body.removeChild(ta);
+
+        if (copied) {
+          showToast(successMsg || ('복사 완료: ' + text));
+          return;
+        }
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(function () {
+            showToast(successMsg || ('복사 완료: ' + text));
+          }).catch(function () {
+            showToast('복사에 실패했습니다. 텍스트를 직접 선택해 복사해 주세요.');
+          });
+        } else {
+          showToast('복사에 실패했습니다. 텍스트를 직접 선택해 복사해 주세요.');
+        }
+      }
+
+      function getLineBadgeHtml(line) {
+        const map = {
+          '1호선': 'line-1',
+          '2호선': 'line-2',
+          '3호선': 'line-3',
+          '4호선': 'line-4',
+          '5호선': 'line-5',
+          '6호선': 'line-6',
+          '7호선': 'line-7',
+          '8호선': 'line-8',
+          '9호선': 'line-9',
+          '공항철도': 'line-arex',
+          '수인분당': 'line-suin',
+          '경의중앙': 'line-gyeongui'
+        };
+        const cls = map[line] || 'line-1';
+        return '<span class="line-badge ' + cls + '">' + escapeHtml(line) + '</span>';
+      }
+
+      /* ======================================================================
+         2. Render 34-Venue One-Click Copy Index Table
+         ====================================================================== */
+      function renderVenueIndexTable() {
+        venueIndexTbody.innerHTML = VENUE_INDEX_DATA.map(function (v) {
+          const lineHtml = v.lines.map(getLineBadgeHtml).join(' ');
+          const searchBlob = [v.name, v.old, v.lines.join(' '), v.station, v.exit, v.tip].join(' ').toLowerCase();
+          const copyStr = '[' + v.name + '] ' + v.station + ' · ' + v.exit + ' · ' + v.tip;
+          const tagsStr = v.tags.join(' ');
+
+          return (
+            '<tr class="index-row" data-tags="' + escapeHtml(tagsStr) + '" data-search="' + escapeHtml(searchBlob) + '" data-copy-text="' + escapeHtml(copyStr) + '">' +
+              '<td class="td-venue">' +
+                (v.isNew ? '<span class="new-badge" style="margin-right:5px;vertical-align:middle;">NEW</span>' : '') +
+                '<span>' + escapeHtml(v.name) + '</span>' +
+                '<span class="td-subname">' + escapeHtml(v.old) + '</span>' +
+              '</td>' +
+              '<td class="td-station">' + lineHtml + ' <span style="margin-left:3px;">' + escapeHtml(v.station) + '</span></td>' +
+              '<td><span class="exit-badge">' + escapeHtml(v.exit) + '</span></td>' +
+              '<td class="td-tip">' + escapeHtml(v.tip) + '</td>' +
+              '<td class="td-copy"><button type="button" class="btn-copy-mini" data-copy-text="' + escapeHtml(copyStr) + '">복사</button></td>' +
+            '</tr>'
+          );
+        }).join('');
+      }
+
+      /* ======================================================================
+         3. Filter Cards & Index Table by Search Query + Active Tab
+         ====================================================================== */
+      function applyFilters() {
+        const q = state.query.trim().toLowerCase();
+        const tab = state.activeTab;
+        searchClearBtn.classList.toggle('visible', q.length > 0);
+
+        let sec1Visible = 0;
+        let sec2Visible = 0;
+
+        document.querySelectorAll('.filterable-card').forEach(function (card) {
+          const tags = (card.getAttribute('data-tags') || '').split(' ');
+          const textBlob = (card.textContent + ' ' + (card.getAttribute('data-keywords') || '')).toLowerCase();
+
+          let matchTab = (tab === 'all') || (tags.indexOf(tab) !== -1);
+          let matchQuery = !q || (textBlob.indexOf(q) !== -1);
+          let show = matchTab && matchQuery;
+
+          card.classList.toggle('hidden-item', !show);
+          if (show) {
+            if (card.getAttribute('data-sec') === '1') sec1Visible++;
+            if (card.getAttribute('data-sec') === '2') sec2Visible++;
+          }
+        });
+
+        sec1CountBadge.textContent = sec1Visible + '곳';
+        sec2CountBadge.textContent = sec2Visible + '개 상세 루트';
+        secNewVenues.classList.toggle('hidden-block', sec1Visible === 0);
+        secVerifiedRoutes.classList.toggle('hidden-block', sec2Visible === 0);
+
+        let indexVisible = 0;
+        document.querySelectorAll('.index-row').forEach(function (row) {
+          const tags = (row.getAttribute('data-tags') || '').split(' ');
+          const blob = row.getAttribute('data-search') || '';
+
+          let matchTab = (tab === 'all') || (tags.indexOf(tab) !== -1);
+          let matchQuery = !q || (blob.indexOf(q) !== -1);
+          let show = matchTab && matchQuery;
+
+          row.classList.toggle('hidden-row', !show);
+          if (show) indexVisible++;
+        });
+
+        sec3CountBadge.textContent = indexVisible + '곳';
+        secVenueIndex.classList.toggle('hidden-block', indexVisible === 0);
+        filterStatusTxt.innerHTML = '인덱스 <strong>' + indexVisible + '</strong>곳';
+
+        const totalVisible = sec1Visible + sec2Visible + indexVisible;
+        emptySearchBox.classList.toggle('visible', totalVisible === 0);
+      }
+
+      /* ======================================================================
+         4. Render User-Submitted Tips Board
+         ====================================================================== */
+      function renderUserTips() {
+        const count = state.userTips.length;
+        userTipsCountBadge.textContent = count + '건';
+
+        if (count === 0) {
+          userTipsList.innerHTML =
+            '<div style="padding:11px 13px;background:#F8FAFE;border:1px dashed #DDE2EC;border-radius:4px;font-size:12px;color:#666666;">' +
+              '아직 등록된 유저 제보가 없습니다. 새로운 공연장 빠른칸이나 우회 출구 꿀팁을 아래에서 제보해 보세요!' +
+            '</div>';
+          return;
+        }
+
+        userTipsList.innerHTML = state.userTips.map(function (t, idx) {
+          return (
+            '<div class="user-tip-item">' +
+              '<div class="user-tip-body">' +
+                '<div class="user-tip-head">★ ' + escapeHtml(t.venue) + ' — <span style="color:#2B59C3;">' + escapeHtml(t.station) + '</span></div>' +
+                '<div class="user-tip-text">' + escapeHtml(t.detail) + '</div>' +
+                '<div class="user-tip-meta">제보자: ' + escapeHtml(t.nick) + ' · ' + escapeHtml(t.date) + '</div>' +
+              '</div>' +
+              '<button type="button" class="btn-del-tip" data-del-tip="' + idx + '">삭제</button>' +
+            '</div>'
+          );
+        }).join('');
+      }
+
+      /* ======================================================================
+         5. Event Listeners
+         ====================================================================== */
+      venueSearchInput.addEventListener('input', function () {
+        state.query = venueSearchInput.value;
+        applyFilters();
+      });
+
+      searchClearBtn.addEventListener('click', function () {
+        venueSearchInput.value = '';
+        state.query = '';
+        applyFilters();
+        venueSearchInput.focus();
+      });
+
+      filterTabs.addEventListener('click', function (e) {
+        const btn = e.target.closest('.filter-tab');
+        if (!btn) return;
+        filterTabs.querySelectorAll('.filter-tab').forEach(function (b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        state.activeTab = btn.getAttribute('data-tab');
+        applyFilters();
+      });
+
+      resetFiltersBtn.addEventListener('click', function () {
+        venueSearchInput.value = '';
+        state.query = '';
+        state.activeTab = 'all';
+        filterTabs.querySelectorAll('.filter-tab').forEach(function (b) {
+          b.classList.toggle('active', b.getAttribute('data-tab') === 'all');
+        });
+        applyFilters();
+      });
+
+      // Global click delegation for row copy, mini button copy, and tip delete
+      document.addEventListener('click', function (e) {
+        const delBtn = e.target.closest('[data-del-tip]');
+        if (delBtn) {
+          const idx = parseInt(delBtn.getAttribute('data-del-tip'), 10);
+          state.userTips.splice(idx, 1);
+          saveUserTips(state.userTips);
+          renderUserTips();
+          showToast('제보 항목이 삭제되었습니다.');
+          return;
+        }
+
+        const copyTarget = e.target.closest('[data-copy-text]');
+        if (copyTarget) {
+          e.stopPropagation();
+          const txt = copyTarget.getAttribute('data-copy-text');
+          copyToClipboard(txt, '복사 완료: ' + txt);
+        }
+      });
+
+      // Submit User Tip
+      tipSubmitForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const venue = document.getElementById('tipVenueInput').value.trim();
+        const station = document.getElementById('tipStationInput').value.trim();
+        const nick = document.getElementById('tipNickInput').value.trim() || 'ㅇㅇ';
+        const detail = document.getElementById('tipDetailInput').value.trim();
+
+        if (!venue || !station || !detail) {
+          showToast('공연장명, 역·출구, 상세 팁을 모두 입력해 주세요.');
+          return;
+        }
+
+        const d = new Date();
+        const dateStr = d.getFullYear() + '.' + String(d.getMonth() + 1).padStart(2, '0') + '.' + String(d.getDate()).padStart(2, '0');
+
+        state.userTips.unshift({
+          venue: venue,
+          station: station,
+          nick: nick,
+          detail: detail,
+          date: dateStr
+        });
+
+        saveUserTips(state.userTips);
+        renderUserTips();
+        document.getElementById('tipVenueInput').value = '';
+        document.getElementById('tipStationInput').value = '';
+        document.getElementById('tipDetailInput').value = '';
+        showToast('새로운 빠른칸·출구 제보가 등록되었습니다!');
+      });
+
+      copyCommentTipBtn.addEventListener('click', function () {
+        const venue = document.getElementById('tipVenueInput').value.trim() || '(공연장명)';
+        const station = document.getElementById('tipStationInput').value.trim() || '(역/빠른칸/출구)';
+        const detail = document.getElementById('tipDetailInput').value.trim() || '(상세 동선)';
+        const text = '[빠른길 제보] ' + venue + ' | ' + station + ' — ' + detail;
+        copyToClipboard(text, '댓글 제보용 텍스트가 복사되었습니다.');
+      });
+
+      // Copy Post-Ready Text Summary
+      copyFullGuideBtn.addEventListener('click', function () {
+        const lines = [
+          '[연극, 뮤지컬 갤러리] 공연장 빠른길 · 빠른출구 총정리 (2026 업데이트)',
+          '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━',
+          '■ 2020~2026 신설·이전·리뉴얼 공연장 & 콘서트홀 (8곳)',
+          '· LG아트센터 서울 (마곡): 9호선·공항철도 마곡나루역 3·4번 출구 (4번 출구 지하 연결통로 직결)',
+          '· GS아트센터 (역삼 · 구 역삼 LG아트센터 자리): 2호선 역삼역 7번 출구(지하연결) / 8번 출구(지상 좌측 1층 매표소)',
+          '· 링크아트센터 & 링크아트센터드림: 4호선 혜화역 1번 출구 도보 3~4분(링크) / 2번 출구 도보 5분(드림)',
+          '· 인스파이어 아레나 (영종도): 공항철도 인천공항2터미널역 1층 셔틀 / 공항화물청사역 무료 순환 셔틀',
+          '· 부천아트센터: 7호선 부천시청역 1번 출구 도보 7~8분 (중앙공원 가로지르는 최단 동선)',
+          '· 국립정동극장 세실: 1·2호선 시청역 3번 출구 도보 3분 / 5호선 광화문역 6번 출구 도보 6분',
+          '· 코엑스 신한카드 아티움 (구 SM타운): 2호선 삼성역 5·6번 출구 밀레니엄광장 연결통로 / 9호선 봉은사역 7번 출구',
+          '· 올림픽공원 (KSPO DOME·올림픽홀·티켓링크 라이브 아레나): 5·9호선 올림픽공원역 3번(KSPO·핸드볼) / 4번(올림픽홀)',
+          '',
+          '■ 연뮤갤 검증 상세 루트 & 버스·환승 꿀팁',
+          '★ 디큐브 링크아트센터 (신도림역 1번): 지선(까치산→신도림) 3-4 / 6-4 · 개찰구 왼쪽 → 하나은행 회전문 → 7층 안내 엘베',
+          '★ 홍익대 대학로 아트센터: 종로5가 3번(01-725 종로08·03 / 01-205 7025번 이화동 하차) · 혜화 3·4번(종로08 바로 앞 하차)',
+          '★ 샤롯데씨어터 (잠실역 3번): 주의 — 최근 호텔 끄트머리 출구→물품보관소 방향 문은 닫혀있을 확률 높음',
+          '★ 충무아트센터 (신당역 1·9번 / 동역사 2번): 신당역 1번 출구 옆 버스 8대 중 2013번 제외 전부 충무 경유',
+          '',
+          '■ 전체 공연장 빠른출구 인덱스 (34곳)',
+          VENUE_INDEX_DATA.map(function (v) {
+            return '- ' + v.name + ' : ' + v.station + ' · ' + v.exit + ' (' + v.tip + ')';
+          }).join('\n')
+        ];
+        copyToClipboard(lines.join('\n'), '게시글용 전체 텍스트가 클립보드에 복사되었습니다!');
+      });
+
+      /* Initial Render */
+      renderVenueIndexTable();
+      renderUserTips();
+      applyFilters();
+    })();
+  </script>
+</body>
+</html>
